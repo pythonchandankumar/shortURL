@@ -27,5 +27,5 @@ jobs:
         run: python manage.py migrate
 
       - name: Django Check
-        run: python manage.py runserver
+        run: python manage.py check
 
