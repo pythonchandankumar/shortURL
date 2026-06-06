@@ -9,10 +9,8 @@ class URLMapping(models.Model):
     click_count = models.PositiveIntegerField(default=0)
     expired_at = models.DateTimeField(null=True,blank=True)
 
-
     def __str__(self):
         return self.original_url
-    
 
     def save(self,*args,**kwargs):
         if not self.short_url:
