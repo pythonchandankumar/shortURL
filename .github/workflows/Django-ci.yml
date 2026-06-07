@@ -29,6 +29,12 @@ jobs:
       - name: Run Ruff
         run: ruff check .
 
+      - name: Install Bandit
+        run: pip install bandit
+
+      - name: Security Bandit check
+        run: bandit -r .
+
       - name: Run Migrations
         run: python manage.py migrate
 
