@@ -3,13 +3,12 @@ repos:
     rev: v0.12.0
     hooks:
       - id: ruff
-        args:
-          - --fix
+        args: [--fix]
 
       - id: ruff-format
-    
+
   - repo: https://github.com/PyCQA/bandit
     rev: "1.8.3"
     hooks:
       - id: bandit
-        args: ["-c", "pyproject.toml"]
+        args: ["-x", "venv,.venv,migrations"]
